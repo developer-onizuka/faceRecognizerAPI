@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Welcome</title>
+  </head>
+  <body>
+    <h1>Welcome to the FaceRecognizer-API</h1>
+    <form action="/facerecognizer" enctype="multipart/form-data">
+      <p><label>file: </label>
+      <input type="file" name="img">
+      <button type="submit" formmethod="get">GET</button>
+      <button type="submit" formmethod="post">POST</button></p>
+      {% if img_path %}
+      <div>
+        <img src="{{ img_path }}" alt="" style="width: 120px; height: 180px">
+      </div>
+      <p>{{ img_path }}</p>
+      {% endif %}
+    </form>
+    <form action="/text">
+      <p><label>text: </label>
+      <input type="text" name="value" value="default">
+      <button type="submit" formmethod="get">GET</button>
+      <button type="submit" formmethod="post">POST</button></p>
+      <p>{{ value }}</p>
+    </form>
+    <a href="./nvidia-smi">nvidia-smi</a> <br>
+  </body>
+</html>
