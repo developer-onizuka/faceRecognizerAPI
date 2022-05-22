@@ -45,7 +45,7 @@ def file_server():
 @app.route("/facerecognizer", methods=['GET','POST'])
 def uploads_file():
     try:
-        inputFile = "/mnt/tmp/input.jpg"
+        inputFile = "/tmp/input.jpg"
         if request.method == 'POST':
             fs = request.files['img']
             fs.save(inputFile)
