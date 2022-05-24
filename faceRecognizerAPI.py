@@ -57,6 +57,7 @@ def uploads_file():
             im = cv2.imread(inputFile)
             imRGB = cv2.cvtColor(im,cv2.COLOR_BGR2RGB)
             facePositions = face_recognition.face_locations(imRGB,model='cnn')
+            os.remove(inputFile)    
             return jsonify({"facePositions": facePositions}), 200
 
             #resp = make_response('Response test1: Response Object')
@@ -71,8 +72,6 @@ def uploads_file():
             #decBase64(binaryData, outputFile)
             #imgsrc = "data:image/jpeg;base64,"+ binaryData
             #return render_template('index.html', img_path=imgsrc)
-
-            os.remove(inputFile)    
 
     except Exception as e:
         return str(e)
