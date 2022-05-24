@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 import cv2
+import os
 import subprocess
 import base64
 import face_recognition
-from flask import Flask, request, render_template, Response
+from flask import Flask, request, render_template, Response, jsonify, make_response
 
 app = Flask(__name__)
 
@@ -54,13 +55,22 @@ def uploads_file():
             im = cv2.imread(inputFile)
             imRGB = cv2.cvtColor(im,cv2.COLOR_BGR2RGB)
             facePositions = face_recognition.face_locations(imRGB,model='cnn')
-            return render_template("json.html", value=facePositions)
+            return jsonify({"facePositions": facePositions}), 200
+
+            #resp = make_response('Response test1: Response Object')
+            #resp_type = type(resp)
+            #resp.headers['X-datatype'] = resp_type
+            #return resp
+
+            #return render_template("json.html", value=facePositions)
             #return render_template("index.html", value=facePositions)
 
             #binaryData = encBase64(inputFile)
             #decBase64(binaryData, outputFile)
             #imgsrc = "data:image/jpeg;base64,"+ binaryData
             #return render_template('index.html', img_path=imgsrc)
+
+            os.remove(inputFile)    
 
     except Exception as e:
         return str(e)
