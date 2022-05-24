@@ -4,7 +4,7 @@ The faceRecognizer is a Web API thru HTTP Post. You can post a image file to get
 You can use it in the following cases, for example.<br>
 
 <img src="https://github.com/developer-onizuka/Diagrams/blob/main/faceRecognizerAPI/Copy%20of%20rabbitMQ.drawio.png" width="720">
-<br>
+
 
 # 0. Deploy Pod and Service
 ```
