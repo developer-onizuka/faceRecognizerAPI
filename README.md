@@ -26,6 +26,9 @@ $ curl -X POST -F img=@/home/vagrant/Downloads/_image.jpg http://face-recognizer
 
 # 2. How to write Python Code
 ```
+import requests
+import json
+
 url = "http://face-recognizer-api-svc:5000/facerecognizer"
 files_data = open(inputFile, 'rb').read()
 data = {'img': (inputFile, files_data, 'image/jpeg')}
