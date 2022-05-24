@@ -4,6 +4,7 @@ import os
 import subprocess
 import base64
 import face_recognition
+import uuid
 from flask import Flask, request, render_template, Response, jsonify, make_response
 
 app = Flask(__name__)
@@ -46,7 +47,8 @@ def file_server():
 @app.route("/facerecognizer", methods=['GET','POST'])
 def uploads_file():
     try:
-        inputFile = "/tmp/input.jpg"
+        inputFile = "/tmp/" + str(uuid.uuid4()) + ".jpg"
+        #inputFile = "/tmp/input.jpg"
         if request.method == 'POST':
             fs = request.files['img']
             fs.save(inputFile)
