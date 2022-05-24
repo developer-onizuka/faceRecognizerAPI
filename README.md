@@ -9,7 +9,7 @@ $ docker push 192.168.1.5:5000/face_recognizer-api:1.0.0
 $ kubectl apply -f faceRecognizerAPI.yaml
 ```
 
-# 1. HTTP Post with cURL
+# 1. HTTP Post image file with cURL
 ```
 $ curl -X POST -F img=@/home/vagrant/Downloads/_image.jpg http://face-recognizer-api-svc:5000/facerecognizer
 {
@@ -24,10 +24,12 @@ $ curl -X POST -F img=@/home/vagrant/Downloads/_image.jpg http://face-recognizer
 }
 ```
 
-# 2. How to write Python Code
+# 2. How to write Python Code to Post image file
 ```
 import requests
 import json
+
+inputFile = /home/vagrant/Downloads/_image.jpg
 
 url = "http://face-recognizer-api-svc:5000/facerecognizer"
 files_data = open(inputFile, 'rb').read()
