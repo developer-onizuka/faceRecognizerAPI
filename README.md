@@ -29,7 +29,7 @@ $ curl -X POST -F img=@/home/vagrant/Downloads/_image.jpg http://face-recognizer
 import requests
 import json
 
-inputFile = /home/vagrant/Downloads/_image.jpg
+inputFile = "/home/vagrant/Downloads/_image.jpg"
 
 url = "http://face-recognizer-api-svc:5000/facerecognizer"
 files_data = open(inputFile, 'rb').read()
