@@ -1,5 +1,7 @@
 # faceRecognizerAPI
 
+The faceRecognizer is a Web API thru HTTP Post. You can post a image file to get the coordinate of faces.<br>
+
 <img src="https://github.com/developer-onizuka/Diagrams/blob/main/faceRecognizerAPI/Copy%20of%20rabbitMQ.drawio.png" width="720">
 <br>
 
