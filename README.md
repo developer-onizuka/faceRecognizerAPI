@@ -1,5 +1,8 @@
 # faceRecognizerAPI
 
+<img src="https://github.com/developer-onizuka/Diagrams/blob/main/faceRecognizerAPI/Copy%20of%20rabbitMQ.drawio.png" width="720">
+<br>
+
 # 0. Deploy Pod and Service
 ```
 $ git clone https://github.com/developer-onizuka/faceRecognizerAPI
