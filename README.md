@@ -7,6 +7,11 @@ You can use it in the following cases, for example.<br>
 
 
 # 0. Deploy Pod and Service
+# 0-1. Deploy GPU DaemonSet thru GPU Operator
+> https://github.com/developer-onizuka/gpu-operator4
+
+# 0-2. Deploy faceRecognizerAPI
+It will be deployed on one of the GPU Nodes with the Nvidia Device Plugin.
 ```
 $ git clone https://github.com/developer-onizuka/faceRecognizerAPI
 $ cd faceRecognizerAPI
