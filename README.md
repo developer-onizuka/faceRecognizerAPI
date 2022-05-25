@@ -7,7 +7,7 @@ You can use it in the following cases, for example.<br>
 
 
 # 0. Deploy Pod and Service
-# 0-1. Deploy GPU DaemonSet thru GPU Operator
+# 0-1. Deploy the GPU Driver DaemonSet thru GPU Operator
 > https://github.com/developer-onizuka/gpu-operator4
 
 # 0-2. Deploy faceRecognizerAPI
