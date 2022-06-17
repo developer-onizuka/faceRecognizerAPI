@@ -15,8 +15,8 @@ It will be deployed on one of the GPU Nodes with the Nvidia Device Plugin.
 ```
 $ git clone https://github.com/developer-onizuka/faceRecognizerAPI
 $ cd faceRecognizerAPI
-$ docker build . -t 192.168.1.5:5000/face_recognizer-api:1.0.0
-$ docker push 192.168.1.5:5000/face_recognizer-api:1.0.0 
+$ docker build . -t 192.168.1.5:5000/face_recognizer-api:1.0.1
+$ docker push 192.168.1.5:5000/face_recognizer-api:1.0.1
 $ kubectl apply -f faceRecognizerAPI.yaml
 ```
 

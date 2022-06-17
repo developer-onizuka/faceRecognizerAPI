@@ -55,8 +55,8 @@ def uploads_file():
             #return render_template("index.html", value=fs) 
 
             im = cv2.imread(inputFile)
-            imRGB = cv2.cvtColor(im,cv2.COLOR_BGR2RGB)
-            facePositions = face_recognition.face_locations(imRGB,model='cnn')
+            #imRGB = cv2.cvtColor(im,cv2.COLOR_BGR2RGB)
+            facePositions = face_recognition.face_locations(im,model='cnn')
             os.remove(inputFile)    
             return jsonify({"facePositions": facePositions}), 200
 
